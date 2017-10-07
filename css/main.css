@@ -8,41 +8,37 @@ section {
   width: 100%;
 }
 
-#first-div {
+.section-div {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  height: 80vh;
-  margin: 0 auto;
+  height: 100vh;
 }
 
-#first-div h1 {
-  padding-top: 20vh;
+.section-div h1 {
   font-size: 5rem;
 }
 
-#first-div h3 {
+.section-div h3 {
   font-size: 2rem;
   text-align: center;
   padding-top: 3rem;
 }
 
-#second-div {
-  padding-top: 20vh;
-  background-color: #9BCAF1 !important;
-  height: 100vh;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
+#first-div {
+  height: 80vh;
 }
 
-#second-div h1 {
-  font-size: 5rem;
+#first-div h1 {
+  padding-top: 20vh;
+}
+
+#second-div {
+  padding-top: 20vh;
+  background-color: #9BCAF1;
 }
 
 #second-div h3 {
-  font-size: 2rem;
-  text-align: center;
   margin-top: 8rem;
   margin-bottom: 3rem;
 }
@@ -53,6 +49,46 @@ section {
   height: 12em;
   display: block;
 }
+
+#third-div {
+  padding-top: 20vh;
+  background-color: #FFDC74;
+}
+
+.project {
+  width: 40%;
+  margin-top: 10vh;
+}
+
+.project a {
+  clear: both;
+  margin: 0 auto;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+.project img {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+#bm {
+  float: left;
+  margin-left: 10vh;
+}
+
+#routesearcher {
+  float: right;
+  margin-right: 10vh;
+}
+
+#routesearcher img {
+  width: 150px;
+  height: 150px;
+  margin-top: 3rem;
+}
+
 
 .sticker {
   position: relative;
@@ -78,7 +114,7 @@ section {
 }
 
 .sticker-cv .sticker-img {
-  background-image: url(../img/cv.png);
+  background-image: url(../img/resume.png);
   background-size: cover;
   float: right;
 }

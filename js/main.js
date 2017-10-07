@@ -5,13 +5,23 @@ window.onload = function() {
     Sticker.init('.sticker-cv');
 }
 
-window.onscroll = function() {
-  el = document.getElementById('scroll-top');
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-      el.style.display = "block";
-  } else {
-      el.style.display = "none";
-  }
+$(window).scroll(function() {
+    el = $('#scroll-top');
+    if ($(window).scrollTop() > 200) {
+      el.show();
+    }
+    else {
+      el.hide();
+    }
+});
+
+function goToDiv(number) {
+  divTop = $('#' + number).offset().top;
+  console.log(divTop);
+  window.scroll({
+    top: divTop,
+    behavior: 'smooth'
+  });
 };
 
 
