@@ -27,19 +27,37 @@
 		</header> <!-- .cd-header -->
 
 		<main>
-				<div id="first-div">
-						<h1>Raúl Lozano Martín</h1>
-						<h3>Software Engineer</h3>
-				</div>
+				<section id="1">
+						<div id="first-div">
+								<h1>Raúl Lozano Martín</h1>
+								<h3>Software Engineer</h3>
+						</div>
+				</section>
+
+				<section id="2">
+						<div id="second-div">
+								<h1>Personal CV and GitHub's link.</h1>
+								<div class="link-div">
+										<div class="sticker sticker-github" onclick="window.open('https://github.com/raullm7', 'github')">
+												<h3>GITHUB</h3>
+										</div>
+										<div class="sticker sticker-cv" onclick="window.open('./docs/CV-v2.0.pdf', 'cv')">
+												<h3>CV</h3>
+										</div>
+								</div>
+						</div>
+				</section>
+
+				<div onclick="topFunction()" id="scroll-top"></div>
 		</main>
 
 		<nav class="cd-3d-nav-container">
 				<ul class="cd-3d-nav">
 						<li class="cd-selected">
-								<a href="#0">Dashboard</a>
+								<a>Dashboard</a>
 						</li>
 						<li>
-								<a href="#0">Projects</a>
+								<a href="#2">Projects</a>
 						</li>
 						<li>
 								<a href="#0">Images</a>
@@ -56,5 +74,7 @@
 		</nav>
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/navbar.js"></script>
+<script type="text/javascript" src="js/sticker.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
