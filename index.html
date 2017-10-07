@@ -29,9 +29,9 @@
 
 			<ul>
 				<li><a onclick="topFunction()" class="active"><span>Home</span></a></li>
-				<li><a onclick="goToDiv(2)"><span>Link</span></a></li>
-				<li><a onclick="goToDiv(3)"><span>Portfolio</span></a></li>
-				<li><a href="#0"><span>Contact</span></a></li>
+				<li><a onclick="goToDiv(2)"><span>Portfolio</span></a></li>
+				<li><a onclick="goToDiv(3)"><span>Link</span></a></li>
+				<li><a onclick="goToDiv(4)"><span>Contact</span></a></li>
 			</ul>
 
 			<span aria-hidden="true" class="stretchy-nav-bg"></span>
@@ -47,32 +47,16 @@
 			</div>
 	</section>
 
-
 	<section id="2">
 			<div id="second-div" class="section-div">
-					<h1>Personal CV and GitHub's link.</h1>
-					<div class="link-div">
-							<div class="sticker sticker-github" onclick="window.open('https://github.com/raullm7', 'github')">
-									<h3>GITHUB</h3>
-							</div>
-							<div class="sticker sticker-cv" onclick="window.open('./docs/CV-v2.0.pdf', 'cv')">
-									<h3>CV</h3>
-							</div>
-					</div>
-			</div>
-	</section>
-
-
-	<section id="3">
-			<div id="third-div" class="section-div">
 					<h1>Projects.</h1>
-					<div id="bm" class="project">
+					<div id="bm" onclick="window.open('http://bananamole.com', 'bananamole')" class="project">
 							<div>
 									<a href="http://www.bananamole.com">Bananamole</a>
 							</div>
 							<img src="./img/BmLogo.png">
 					</div>
-					<div id="routesearcher" class="project">
+					<div id="routesearcher" onclick="window.open('http://routesearcher.com', 'routesearcher')" class="project">
 							<div>
 									<a href="http://www.routesearcher.com">Route Searcher</a>
 							</div>
@@ -81,9 +65,29 @@
 			</div>
 	</section>
 
+	<section id="3">
+			<div id="third-div" class="section-div">
+					<h1>Personal CV and GitHub's link.</h1>
+					<div class="link-div">
+							<div class="sticker sticker-github" onclick="window.open('https://github.com/raullm7', 'github')">
+									<h3>Github</h3>
+							</div>
+							<div class="sticker sticker-cv" onclick="window.open('./docs/CV-v2.0.pdf', 'cv')">
+									<h3>CV</h3>
+							</div>
+					</div>
+			</div>
+	</section>
 
-			<div onclick="topFunction()" id="scroll-top"></div>
-	</main>
+	<section id="4">
+			<div id="fourth-div" class="section-div">
+					<h1>Contact Me.</h1>
+					<a href="mailto:lozanomartinraul@gmail.com">lozanomartinraul@gmail.com</a>
+			</div>
+	</section>
+
+
+	<div onclick="topFunction()" id="scroll-top"></div>
 <script src="js/jquery-2.1.1.js"></script>
 <script src="js/sticker.min.js"></script>
 <script src="js/particles.js"></script>

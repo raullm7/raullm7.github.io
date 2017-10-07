@@ -50,14 +50,23 @@ section {
   display: block;
 }
 
+#second-div a {
+  color: black;
+}
+
 #third-div {
   padding-top: 20vh;
   background-color: #FFDC74;
 }
 
+#third-div h3{
+  padding-bottom: 5vh;
+}
+
 .project {
   width: 40%;
   margin-top: 10vh;
+  cursor: pointer;
 }
 
 .project a {
@@ -89,12 +98,26 @@ section {
   margin-top: 3rem;
 }
 
+#fourth-div {
+  padding-top: 20vh;
+}
+
+#fourth-div h1{
+  padding-bottom: 20vh;
+}
+
+#fourth-div a{
+  font-size: 3rem;
+  text-align: center;
+  color: white;
+}
 
 .sticker {
   position: relative;
   width: 10em;
   height: 10em;
   cursor: pointer;
+  margin-top: 10vh;
 }
 
 .sticker-github {
@@ -108,7 +131,7 @@ section {
 }
 
 .sticker-github .sticker-img {
-  background-image: url(../img/ironcat.png);
+  background-image: url(../img/heisencat.png);
   background-size: cover;
   float: left;
 }
