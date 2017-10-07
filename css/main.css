@@ -1,0 +1,21 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+#first-div {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+#first-div h1 {
+  font-size: 5rem;
+  margin: 1em auto;
+}
+
+#first-div h3 {
+  font-size: 2rem;
+  text-align: center;
+  margin: -1em auto;
+}
