@@ -11,70 +11,65 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
 
-	<link rel="stylesheet" href="css/navbar/reset.css">
-	<link rel="stylesheet" href="css/navbar/style.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/main.css">
 	<script src="js/modernizr.js"></script>
 
 	<title>Raul Lozano Martin</title>
 </head>
 <body>
-		<header class="cd-header">
-				<a href="#0" class="cd-3d-nav-trigger">
-						Menu
-						<span></span>
-				</a>
-		</header> <!-- .cd-header -->
+	<div id="particles-js"></div>
+	<header>
+		<nav class="cd-stretchy-nav">
+			<a class="cd-nav-trigger" href="#0">
+				Menu
+				<span aria-hidden="true"></span>
+			</a>
 
-		<main>
-				<section id="1">
-						<div id="first-div">
-								<h1>Raúl Lozano Martín</h1>
-								<h3>Software Engineer</h3>
-						</div>
-				</section>
+			<ul>
+				<li><a href="#0" class="active"><span>Home</span></a></li>
+				<li><a href="#0"><span>Portfolio</span></a></li>
+				<li><a href="#0"><span>Services</span></a></li>
+				<li><a href="#0"><span>Store</span></a></li>
+				<li><a href="#0"><span>Contact</span></a></li>
+			</ul>
 
-				<section id="2">
-						<div id="second-div">
-								<h1>Personal CV and GitHub's link.</h1>
-								<div class="link-div">
-										<div class="sticker sticker-github" onclick="window.open('https://github.com/raullm7', 'github')">
-												<h3>GITHUB</h3>
-										</div>
-										<div class="sticker sticker-cv" onclick="window.open('./docs/CV-v2.0.pdf', 'cv')">
-												<h3>CV</h3>
-										</div>
-								</div>
-						</div>
-				</section>
-
-				<div onclick="topFunction()" id="scroll-top"></div>
-		</main>
-
-		<nav class="cd-3d-nav-container">
-				<ul class="cd-3d-nav">
-						<li class="cd-selected">
-								<a>Dashboard</a>
-						</li>
-						<li>
-								<a href="#2">Projects</a>
-						</li>
-						<li>
-								<a href="#0">Images</a>
-						</li>
-						<li>
-								<a href="#0">Settings</a>
-						</li>
-						<li>
-								<a href="#0">New</a>
-						</li>
-				</ul>
-
-				<span class="cd-marker color-1"></span>
+			<span aria-hidden="true" class="stretchy-nav-bg"></span>
 		</nav>
+	</header> <!-- .cd-header -->
+
+
+
+	<section id="1">
+			<div id="first-div">
+					<h1>Raúl Lozano Martín</h1>
+					<h3>Software Engineer</h3>
+			</div>
+	</section>
+
+
+	<section id="2">
+			<div id="second-div">
+					<h1>Personal CV and GitHub's link.</h1>
+					<div class="link-div">
+							<div class="sticker sticker-github" onclick="window.open('https://github.com/raullm7', 'github')">
+									<h3>GITHUB</h3>
+							</div>
+							<div class="sticker sticker-cv" onclick="window.open('./docs/CV-v2.0.pdf', 'cv')">
+									<h3>CV</h3>
+							</div>
+					</div>
+			</div>
+	</section>
+
+
+			<div onclick="topFunction()" id="scroll-top"></div>
+	</main>
 <script src="js/jquery-2.1.1.js"></script>
-<script src="js/navbar.js"></script>
-<script type="text/javascript" src="js/sticker.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+<script src="js/sticker.min.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/app.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
