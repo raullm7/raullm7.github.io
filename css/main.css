@@ -138,11 +138,15 @@ section {
     #project-bottom {
       height: 5em;
     }
+    #third-div {
+      min-height: 130vh;
+    }
     .sticker {
-      float: none;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 5em;
+      float: none !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      margin-top: 5vh !important;
+      height: auto !important;
     }
  }
 
