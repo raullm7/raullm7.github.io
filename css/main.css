@@ -50,6 +50,10 @@ section {
   display: block;
 }
 
+#second-div a:hover {
+  color: white;
+}
+
 #second-div a {
   color: black;
 }
@@ -59,8 +63,12 @@ section {
   background-color: #FFDC74;
 }
 
-#third-div h3{
+#third-div h3 {
   padding-bottom: 5vh;
+}
+
+#third-div h3:hover {
+  color: black;
 }
 
 .project {
@@ -83,12 +91,12 @@ section {
 
 #bm {
   float: left;
-  margin-left: 10vh;
+  margin-left: 20vw;
 }
 
 #routesearcher {
   float: right;
-  margin-right: 10vh;
+  margin-right: 20vw;
 }
 
 #routesearcher img {
@@ -101,16 +109,20 @@ section {
   padding-top: 20vh;
 }
 
-#fourth-div h1{
+#fourth-div h1 {
   padding-bottom: 20vh;
 }
 
-#fourth-div a{
+#fourth-div a {
   font-size: 3rem;
   text-align: center;
   color: white;
-  padding-bottom: 30vh;
+  margin-bottom: 30vh;
   display: block;
+}
+
+#fourth-div a:hover {
+  color: #9BCAF1;
 }
 
 #HFCrypto {
@@ -162,12 +174,12 @@ section {
 
 .sticker-github {
   float: left;
-  margin-left: 15%;
+  margin-left: 20vw;
 }
 
 .sticker-cv {
   float: right;
-  margin-right: 15%;
+  margin-right: 20vw;
 }
 
 .sticker-github .sticker-img {
