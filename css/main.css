@@ -109,6 +109,8 @@ section {
   font-size: 3rem;
   text-align: center;
   color: white;
+  padding-bottom: 30vh;
+  display: block;
 }
 
 #HFCrypto {
