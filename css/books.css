@@ -13,11 +13,15 @@ body {
   background-color: black;
   padding: 2rem;
   border-radius: 1rem;
+  display: none;
 }
 
 img {
   height: 30vh;
   background-size: cover;
+  background-color: white;
+  padding: 1vh;
+  margin-top: -1vh;
 }
 
 .book.left {
@@ -33,4 +37,24 @@ img {
 .book.right {
   float: right;
   margin-right: 7vw;
+}
+
+#show-more {
+  margin: 8vh auto;
+  height: 8vh;
+  width: 8vh;
+  background-image: url(../../img/arrow-down.png);
+  background-size: cover;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+
+@@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+
+#show-more:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
