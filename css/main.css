@@ -109,15 +109,11 @@ section {
   padding-top: 20vh;
 }
 
-#fourth-div h1 {
-  padding-bottom: 20vh;
-}
-
 #fourth-div a {
   font-size: 3rem;
   text-align: center;
   color: white;
-  margin-bottom: 30vh;
+  margin-top: 20vh;
   display: block;
 }
 
