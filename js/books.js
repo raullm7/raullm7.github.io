@@ -1,5 +1,6 @@
 $(function () {
   // Load all the books
+  var url = 'https://raullm7.github.io'
   var folder = '/img/books';
   $.ajax({
     url : folder,
@@ -8,9 +9,9 @@ $(function () {
       for (var i = 0; i < listOfLinks.length - 3; i += 3) {
         $('body').append(
           `<div class="row">
-            <img src="${folder}${listOfLinks[i].pathname}">
-            <img src="${folder}${listOfLinks[i + 1].pathname}">
-            <img src="${folder}${listOfLinks[i + 2].pathname}">
+            <img src="${url}${folder}${listOfLinks[i].pathname}">
+            <img src="${url}${folder}${listOfLinks[i + 1].pathname}">
+            <img src="${url}${folder}${listOfLinks[i + 2].pathname}">
           </div>
         `);
       }
