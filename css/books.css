@@ -23,8 +23,8 @@ img {
 
 #show-more {
   margin: 8vh auto;
-  height: 8vh;
-  width: 8vh;
+  height: 60px;
+  width: 60px;
   background-image: url(../img/arrow-down.png);
   background-size: cover;
   cursor: pointer;
