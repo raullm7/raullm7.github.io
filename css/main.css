@@ -94,12 +94,12 @@ section {
   margin-left: 20vw;
 }
 
-#routesearcher {
+#rnafolding {
   float: right;
   margin-right: 20vw;
 }
 
-#routesearcher img {
+#rnafolding img {
   width: 150px;
   height: 150px;
   margin-top: 3rem;
@@ -142,7 +142,7 @@ section {
        margin-left: auto !important;
        margin-right: auto !important;
     }
-    #routesearcher img {
+    #rnafolding img {
       margin-bottom: 3em;
     }
     #project-bottom {
