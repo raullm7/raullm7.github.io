@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Books Read">
+	<meta name="author" content="Raul Lozano Martin">
+	<meta neme="keywords" content="Books Software developer, Engineer">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+
+	<title>Presupuestos</title>
+</head>
+<body>
+	<form>
+		Dimension:<br>
+	  <select name="dimension" id="dimension">
+	    <option value="A6">A6</option>
+	    <option value="A5">A5</option>
+	    <option value="A4">A4</option>
+	    <option value="1724">17 x 24</option>
+			<option value="2121">21 x 21</option>
+	  </select>
+  	<br><br>
+
+		Tirada:<br>
+		<input type="number" name="tirada" id="tirada">
+		<br><br>
+
+		Paginas Interior:<br>
+		<input type="number" name="paginas" id="paginas">
+		<br><br>
+
+		Gramaje Papel Interior:<br>
+		<input type="number" name="gramajeInt" id="gramajeInt">
+		<br><br>
+
+		Gramaje Papel Exterior:<br>
+		<input type="number" name="gramajeExt" id="gramajeExt">
+		<br><br>
+
+		Encuadernacion:<br>
+	  <select name="encuadernacion" id="encuadernacion">
+	    <option value="fresado">Fresado</option>
+	    <option value="grapado">Grapado</option>
+	    <option value="rustico">Rustico</option>
+	  </select>
+  	<br><br>
+
+		Destino:<br>
+	  <select name="destino" id="destino">
+	    <option value="alava">alava</option>
+			<option value="albacete">albacete</option>
+			<option value="alicante">alicante</option>
+			<option value="almeria">almeria</option>
+			<option value="avila">avila</option>
+			<option value="asturias">asturias</option>
+			<option value="badajoz">badajoz</option>
+			<option value="barcelona">barcelona</option>
+			<option value="burgos">burgos</option>
+			<option value="caceres">caceres</option>
+			<option value="cadiz">cadiz</option>
+			<option value="castellon">castellon</option>
+			<option value="ciudad real">ciudad real</option>
+			<option value="cordoba">cordoba</option>
+			<option value="coruna">coruna</option>
+			<option value="cuenca">cuenca</option>
+			<option value="girona">girona</option>
+			<option value="granada">granada</option>
+			<option value="guadalajara">guadalajara</option>
+			<option value="guipuzcua">guipuzcua</option>
+			<option value="huelva">huelva</option>
+			<option value="huesca">huesca</option>
+			<option value="jaen">jaen</option>
+			<option value="leon">leon</option>
+			<option value="lleida">lleida</option>
+			<option value="logrono">logrono</option>
+			<option value="lugo">lugo</option>
+			<option value="madrid">madrid</option>
+			<option value="malaga">malaga</option>
+			<option value="murcia">murcia</option>
+			<option value="navarra">navarra</option>
+			<option value="ourense">ourense</option>
+			<option value="palencia">palencia</option>
+			<option value="pontevedra">pontevedra</option>
+			<option value="salamanca">salamanca</option>
+			<option value="santander">santander</option>
+			<option value="segovia">segovia</option>
+			<option value="sevilla">sevilla</option>
+			<option value="soria">soria</option>
+			<option value="tarragona">tarragona</option>
+			<option value="teruel">teruel</option>
+			<option value="toledo">toledo</option>
+			<option value="valencia">valencia</option>
+			<option value="valladolid">valladolid</option>
+			<option value="vizcaya">vizcaya</option>
+			<option value="zamora">zamora</option>
+			<option value="zaragoza">zaragoza</option>
+			<option value="mallorca">mallorca</option>
+			<option value="menorca">menorca</option>
+			<option value="ibiza">ibiza</option>
+			<option value="andorra">andorra</option>
+			<option value="portugal">portugal</option>
+			<option value="formentera">formentera</option>
+	  </select>
+  	<br><br>
+
+		Plastificado:<br>
+	  <select name="plastificado" id="plastificado">
+			<option value="no">No</option>
+	    <option value="si">Si</option>
+	  </select>
+  	<br><br>
+
+		Tipo de Plastificado:<br>
+	  <select name="plastificadoBrillo" id="plastificadoBrillo">
+	    <option value="plastificadoBrillo">Brillo</option>
+	    <option value="plastificadoMate">Mate</option>
+	  </select>
+  	<br><br>
+
+		Plastificado Dos Caras:<br>
+	  <select name="plastificadoDosCaras" id="plastificadoDosCaras">
+			<option value="no">No</option>
+	    <option value="si">Si</option>
+	  </select>
+  	<br><br>
+
+		Tintas:<br>
+	  <select name="tintas" id="tintas">
+	    <option value="1/1">1/1</option>
+	    <option value="2/2">2/2</option>
+			<option value="4/4">4/4</option>
+	  </select>
+  	<br><br>
+
+  	<input type="" value="Calcular" onclick="calcularPrecios()">
+	</form>
+
+	<br><br>
+	<span id="precio"></span>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/presupuestos.js"></script>
+</body>
+</html>
