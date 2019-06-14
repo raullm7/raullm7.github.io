@@ -21,6 +21,9 @@ function calcularPrecios() {
               '&plastificadoDosCaras=' + (plastificadoDosCaras.value == 'si');
 
   $.get(url, function(data, status) {
+    for (const key in data) {
+    	document.getElementById('precio').innerHTML = (key + ": " + data[key] + "<br>");
+    }
     console.log(data);
   });
 }
