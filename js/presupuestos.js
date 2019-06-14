@@ -11,6 +11,8 @@ function calcularPrecios() {
   const plastificadoDosCaras = document.getElementById('plastificadoDosCaras');
   const tintas = document.getElementById('tintas');
 
+  document.getElementById('precio').textContent = "";
+
   const url = 'https://presupuestosgraficasandalusi.com/presupuesto?tirada=' +
               tirada.value + '&paginas=' + paginas.value + '&dimension=' + dimension.value +
               '&papelInt=brillo&gramajeInt=' + gramajeInt.value + '&papelExt=brillo&gramajeExt=' + gramajeExt.value +
