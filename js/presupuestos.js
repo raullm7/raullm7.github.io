@@ -13,7 +13,7 @@ function calcularPrecios() {
 
   document.getElementById('precio').textContent = tirada.value;
 
-  const url = 'https://presupuestos.eu-west-1.elasticbeanstalk.com/presupuesto?tirada=' +
+  const url = 'https://presupuestosgraficasandalusi.com/presupuesto?tirada=' +
               tirada.value + '&paginas=' + paginas.value + '&dimension=' + dimension.value +
               '&papelInt=brillo&gramajeInt=' + gramajeInt.value + '&papelExt=brillo&gramajeExt=' + gramajeExt.value +
               '&encuadernacion=' + encuadernacion.value + '&destino=' + destino.value + '&plastificado=' + (plastificado.value == 'si') +
