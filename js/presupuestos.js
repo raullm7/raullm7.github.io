@@ -23,7 +23,12 @@ function calcularPrecios() {
 
   $.get(url, function(data, status) {
     const precioSpan = document.getElementById('precio');
-    for (const key in data) {
+    const precioSpanNueva = document.getElementById('precioMaquinaNueva');
+    for (const key in data.preciosMaquinaVieja) {
+    	precioSpan.innerHTML += (key + ": " + data[key] + "<br>");
+    }
+
+    for (const key in data.preciosMaquinaNueva) {
     	precioSpan.innerHTML += (key + ": " + data[key] + "<br>");
     }
     console.log(data);
