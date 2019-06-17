@@ -10,6 +10,7 @@ function calcularPrecios() {
   const plastificadoBrillo = document.getElementById('plastificadoBrillo');
   const plastificadoDosCaras = document.getElementById('plastificadoDosCaras');
   const tintas = document.getElementById('tintas');
+  const beneficio = document.getElementById('beneficio');
 
   document.getElementById('precio').textContent = "";
 
@@ -18,7 +19,7 @@ function calcularPrecios() {
               '&papelInt=brillo&gramajeInt=' + gramajeInt.value + '&papelExt=brillo&gramajeExt=' + gramajeExt.value +
               '&encuadernacion=' + encuadernacion.value + '&destino=' + destino.value + '&plastificado=' + (plastificado.value == 'si') +
               '&plastificadoBrillo=' + (plastificadoBrillo.value == 'si') + '&tintas=' + tintas.value +
-              '&plastificadoDosCaras=' + (plastificadoDosCaras.value == 'si');
+              '&plastificadoDosCaras=' + (plastificadoDosCaras.value == 'si') + '&beneficio=' + beneficio.value;
 
   $.get(url, function(data, status) {
     const precioSpan = document.getElementById('precio');
