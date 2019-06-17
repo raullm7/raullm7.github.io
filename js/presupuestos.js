@@ -25,11 +25,11 @@ function calcularPrecios() {
     const precioSpan = document.getElementById('precio');
     const precioSpanNueva = document.getElementById('precioMaquinaNueva');
     for (const key in data.preciosMaquinaVieja) {
-    	precioSpan.innerHTML += (key + ": " + data[key] + "<br>");
+    	precioSpan.innerHTML += (key + ": " + data.preciosMaquinaVieja[key] + "<br>");
     }
 
     for (const key in data.preciosMaquinaNueva) {
-    	precioSpan.innerHTML += (key + ": " + data[key] + "<br>");
+    	precioSpanNueva.innerHTML += (key + ": " + data.preciosMaquinaNueva[key] + "<br>");
     }
     console.log(data);
   });
