@@ -12,8 +12,6 @@ function calcularPrecios() {
   const tintas = document.getElementById('tintas');
   const beneficio = document.getElementById('beneficio');
 
-  document.getElementById('precio').textContent = "";
-
   const url = 'https://presupuestosgraficasandalusi.com/presupuesto?tirada=' +
               tirada.value + '&paginas=' + paginas.value + '&dimension=' + dimension.value +
               '&papelInt=brillo&gramajeInt=' + gramajeInt.value + '&papelExt=brillo&gramajeExt=' + gramajeExt.value +
@@ -24,6 +22,10 @@ function calcularPrecios() {
   $.get(url, function(data, status) {
     const precioSpan = document.getElementById('precio');
     const precioSpanNueva = document.getElementById('precioMaquinaNueva');
+
+    precioSpan.innerHTML = "";
+    precioSpanNueva.innerHTML = "";
+
     for (const key in data.preciosMaquinaVieja) {
     	precioSpan.innerHTML += (key + ": " + data.preciosMaquinaVieja[key] + "<br>");
     }
@@ -31,6 +33,7 @@ function calcularPrecios() {
     for (const key in data.preciosMaquinaNueva) {
     	precioSpanNueva.innerHTML += (key + ": " + data.preciosMaquinaNueva[key] + "<br>");
     }
+
     console.log(data);
   });
 }
