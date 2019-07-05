@@ -35,6 +35,7 @@ function aniadir_scripts(){
                 var tamano = $("input[name=tamano-papel]:radio:checked").val();
                 var paginas = $("select[name=paginas]").val();
                 var cantidad = $("select[name=cantidad]").val();
+                var destino = $("select[name=destino]").val();
                 var gramaje_interior = $("select[name=gramaje_interior]").val();
                 var papel_interior = $("input[name=papel_interior]:radio:checked").val();
                 var gramaje_cubierta = $("select[name=gramaje_cubierta]").val();
@@ -100,7 +101,8 @@ function aniadir_scripts(){
                               "&plastificado=" + plastificadoBool +
                               "&plastificadoBrillo=" + plastificadoBrillo +
                               "&plastificadoDosCaras=" + plastificadoDosCaras +
-                              "&encuadernacion=grapado&destino=madrid&tintas=4%2F4&beneficio=15";
+                              "&destino=" + destino +
+                              "&encuadernacion=grapado&tintas=4%2F4&beneficio=15";
 
                     //Ajax
                     $.get(
@@ -827,9 +829,6 @@ function calculadora_funcion($atts) {
   	$salida.="<input id='papel-a3' type='radio' name='tamano-papel' value='a5' class='radio-papel hidden' />";
   	$salida.="<label for='papel-a3' class='label-a3'><div class='div-a3'><span>A5</span><br/><span>(148x210mm)</span></div></label>";
 
-    $salida.="<input id='papel-a6' type='radio' name='tamano-papel' value='a6' class='radio-papel hidden' />";
-  	$salida.="<label for='papel-a6' class='label-a6'><div class='div-a6'><span>A6</span><br/><span>(105x148mm)</span></div></label>";
-
   	$salida.="<input id='papel-17x24' type='radio' name='tamano-papel' value='17' class='radio-papel hidden' />";
   	$salida.="<label for='papel-17x24' class='label-17x24'><div class='div-17x24'><span>17x24</span><br/><span>(170x240mm)</span></div></label>";
 	$salida.="<div class='caja-mas-contenido'>";
@@ -862,44 +861,108 @@ function calculadora_funcion($atts) {
     "<option value='88'>88</option>".
     "</select>".
     "</div>".
+
     "<div>".
-    "<label>CANTIDAD</label>".
-    "<div class='custom-select'>".
-    "<select name='cantidad'>".
-    "<option value='0'>Elige</option>".
-    "<option value='500'>500</option>".
-    "<option value='750'>750</option>".
-    "<option value='1000'>1000</option>".
-    "<option value='1250'>1250</option>".
-    "<option value='1500'>1500</option>".
-    "<option value='1750'>1750</option>".
-    "<option value='2000'>2000</option>".
-    "<option value='2250'>2250</option>".
-    "<option value='2500'>2500</option>".
-    "<option value='2750'>2750</option>".
-    "<option value='3000'>3000</option>".
-    "<option value='3500'>3500</option>".
-    "<option value='4000'>4000</option>".
-    "<option value='4500'>4500</option>".
-    "<option value='5000'>5000</option>".
-    "<option value='5500'>5500</option>".
-    "<option value='6000'>6000</option>".
-    "<option value='6500'>6500</option>".
-    "<option value='7000'>7000</option>".
-    "<option value='7500'>7500</option>".
-    "<option value='8000'>8000</option>".
-    "<option value='8500'>8500</option>".
-    "<option value='9000'>9000</option>".
-    "<option value='9500'>9500</option>".
-    "<option value='10000'>10000</option>".
-    "<option value='11000'>11000</option>".
-    "<option value='12000'>12000</option>".
-    "<option value='13000'>13000</option>".
-    "<option value='14000'>14000</option>".
-    "<option value='15000'>15000</option>".
-    "</select>".
+      "<label>CANTIDAD</label>".
+      "<div class='custom-select'>".
+        "<select name='cantidad'>".
+        "<option value='0'>Elige</option>".
+        "<option value='500'>500</option>".
+        "<option value='750'>750</option>".
+        "<option value='1000'>1000</option>".
+        "<option value='1250'>1250</option>".
+        "<option value='1500'>1500</option>".
+        "<option value='1750'>1750</option>".
+        "<option value='2000'>2000</option>".
+        "<option value='2250'>2250</option>".
+        "<option value='2500'>2500</option>".
+        "<option value='2750'>2750</option>".
+        "<option value='3000'>3000</option>".
+        "<option value='3500'>3500</option>".
+        "<option value='4000'>4000</option>".
+        "<option value='4500'>4500</option>".
+        "<option value='5000'>5000</option>".
+        "<option value='5500'>5500</option>".
+        "<option value='6000'>6000</option>".
+        "<option value='6500'>6500</option>".
+        "<option value='7000'>7000</option>".
+        "<option value='7500'>7500</option>".
+        "<option value='8000'>8000</option>".
+        "<option value='8500'>8500</option>".
+        "<option value='9000'>9000</option>".
+        "<option value='9500'>9500</option>".
+        "<option value='10000'>10000</option>".
+        "<option value='11000'>11000</option>".
+        "<option value='12000'>12000</option>".
+        "<option value='13000'>13000</option>".
+        "<option value='14000'>14000</option>".
+        "<option value='15000'>15000</option>".
+        "</select>".
+      "</div>".
     "</div>".
+
+    "<div>".
+      "<label>DESTINO</label>".
+      "<div class='custom-select'>".
+        "<select name='destino'>".
+        "<option value='alava'>Alava</option>".
+        "<option value='albacete'>Albacete</option>".
+        "<option value='alicante'>Alicante</option>".
+        "<option value='almeria'>Almeria</option>".
+        "<option value='avila'>Avila</option>".
+        "<option value='asturias'>Asturias</option>".
+        "<option value='badajoz'>Badajoz</option>".
+        "<option value='barcelona'>Barcelona</option>".
+        "<option value='burgos'>Burgos</option>".
+        "<option value='caceres'>Caceres</option>".
+        "<option value='cadiz'>Cadiz</option>".
+        "<option value='castellon'>Castellon</option>".
+        "<option value='ciudad real'>Ciudad real</option>".
+        "<option value='cordoba'>Cordoba</option>".
+        "<option value='coruna'>Coruna</option>".
+        "<option value='cuenca'>Cuenca</option>".
+        "<option value='girona'>Girona</option>".
+        "<option value='granada'>Granada</option>".
+        "<option value='guadalajara'>Guadalajara</option>".
+        "<option value='guipuzcua'>Guipuzcua</option>".
+        "<option value='huelva'>Huelva</option>".
+        "<option value='huesca'>Huesca</option>".
+        "<option value='jaen'>Jaen</option>".
+        "<option value='leon'>Leon</option>".
+        "<option value='lleida'>Lleida</option>".
+        "<option value='logrono'>Logrono</option>".
+        "<option value='lugo'>Lugo</option>".
+        "<option value='madrid'>Madrid</option>".
+        "<option value='malaga'>Malaga</option>".
+        "<option value='murcia'>Murcia</option>".
+        "<option value='navarra'>Navarra</option>".
+        "<option value='ourense'>Ourense</option>".
+        "<option value='palencia'>Palencia</option>".
+        "<option value='pontevedra'>Pontevedra</option>".
+        "<option value='salamanca'>Salamanca</option>".
+        "<option value='santander'>Santander</option>".
+        "<option value='segovia'>Segovia</option>".
+        "<option value='sevilla'>Sevilla</option>".
+        "<option value='soria'>Soria</option>".
+        "<option value='tarragona'>Tarragona</option>".
+        "<option value='teruel'>Teruel</option>".
+        "<option value='toledo'>Toledo</option>".
+        "<option value='valencia'>Valencia</option>".
+        "<option value='valladolid'>Valladolid</option>".
+        "<option value='vizcaya'>Vizcaya</option>".
+        "<option value='zamora'>Zamora</option>".
+        "<option value='zaragoza'>Zaragoza</option>".
+        "<option value='mallorca'>Mallorca</option>".
+        "<option value='menorca'>Menorca</option>".
+        "<option value='ibiza'>Ibiza</option>".
+        "<option value='andorra'>Andorra</option>".
+        "<option value='portugal'>Portugal</option>".
+        "<option value='formentera'>Formentera</option>".
+        "</select>".
+      "</div>".
     "</div>".
+
+
     "</div>".
     "</div>".
     "</div>".
