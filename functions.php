@@ -93,7 +93,7 @@ function aniadir_scripts(){
                     var presupuestosUrl = "https://presupuestosgraficasandalusi.com/presupuesto?" +
                               "dimension=" + tamano +
                               "&tirada=" + cantidad +
-                              "&paginas=" + paginas +
+                              "&paginas=" + (paginas - 4) +
                               "&gramajeInt=" + gramaje_interior +
                               "&gramajeExt=" + gramaje_cubierta +
                               "&papelInt=" + papelInt +
@@ -102,7 +102,7 @@ function aniadir_scripts(){
                               "&plastificadoBrillo=" + plastificadoBrillo +
                               "&plastificadoDosCaras=" + plastificadoDosCaras +
                               "&destino=" + destino +
-                              "&encuadernacion=grapado&tintas=4%2F4&beneficio=15";
+                              "&encuadernacion=grapado&tintas=4%2F4&beneficio=30";
 
                     //Ajax
                     $.get(
@@ -822,15 +822,28 @@ function calculadora_funcion($atts) {
 	$salida.="<div class='caja-header'>";
 	$salida.="<h2>FORMATO Y CANTIDAD (Cerrado y vertical)</h2>";
 	$salida.="</div>";
-	$salida.="<div class='caja-contenido'>";
-    $salida.="<input id='papel-a4' type='radio' name='tamano-papel' value='a4' class='radio-papel hidden' />";
-    $salida.="<label for='papel-a4' class='label-a4'><div class='div-a4'><span>A4</span><br/><span>(210x297mm)</span></div></label>";
+	$salida.="<div class='caja-contenido' style='padding-top:40px'>";
+    $salida.="<div style='margin-bottom: 3px'>";
+      $salida.="<input id='papel-a6' type='radio' name='tamano-papel' value='a6' class='radio-papel hidden' />";
+      $salida.="<label for='papel-a6' class='label-a6'><div class='div-a6'><span>A6</span><br/><span>(105x148mm)</span></div></label>";
 
-  	$salida.="<input id='papel-a3' type='radio' name='tamano-papel' value='a5' class='radio-papel hidden' />";
-  	$salida.="<label for='papel-a3' class='label-a3'><div class='div-a3'><span>A5</span><br/><span>(148x210mm)</span></div></label>";
+      $salida.="<input id='papel-a3' type='radio' name='tamano-papel' value='a5' class='radio-papel hidden' />";
+    	$salida.="<label for='papel-a3' class='label-a3'><div class='div-a3'><span>A5</span><br/><span>(148x210mm)</span></div></label>";
 
-  	$salida.="<input id='papel-17x24' type='radio' name='tamano-papel' value='17' class='radio-papel hidden' />";
-  	$salida.="<label for='papel-17x24' class='label-17x24'><div class='div-17x24'><span>17x24</span><br/><span>(170x240mm)</span></div></label>";
+      $salida.="<input id='papel-a4' type='radio' name='tamano-papel' value='a4' class='radio-papel hidden' />";
+      $salida.="<label for='papel-a4' class='label-a4'><div class='div-a4'><span>A4</span><br/><span>(210x297mm)</span></div></label>";
+    $salida.="</div>";
+
+    $salida.="<div style='margin-bottom: 3px'>";
+      $salida.="<input id='papel-17x24' type='radio' name='tamano-papel' value='1724' class='radio-papel hidden' />";
+    	$salida.="<label for='papel-17x24' class='label-17x24'><div class='div-17x24'><span>17x24</span><br/><span>(170x240mm)</span></div></label>";
+
+      $salida.="<input id='papel-20x20' type='radio' name='tamano-papel' value='2020' class='radio-papel hidden' />";
+    	$salida.="<label for='papel-20x20' class='label-20x20'><div class='div-20x20'><span>20x20</span><br/><span>(200x200mm)</span></div></label>";
+
+      $salida.="<input id='papel-21x21' type='radio' name='tamano-papel' value='2121' class='radio-papel hidden' />";
+    	$salida.="<label for='papel-21x21' class='label-21x21'><div class='div-21x21'><span>21x21</span><br/><span>(210x210mm)</span></div></label>";
+    $salida.="</div>";
 	$salida.="<div class='caja-mas-contenido'>";
 	$salida.="<div>";
 	//Nº Páginas
@@ -867,6 +880,8 @@ function calculadora_funcion($atts) {
       "<div class='custom-select'>".
         "<select name='cantidad'>".
         "<option value='0'>Elige</option>".
+        "<option value='10'>10</option>".
+        "<option value='250'>250</option>".
         "<option value='500'>500</option>".
         "<option value='750'>750</option>".
         "<option value='1000'>1000</option>".
@@ -897,6 +912,21 @@ function calculadora_funcion($atts) {
         "<option value='13000'>13000</option>".
         "<option value='14000'>14000</option>".
         "<option value='15000'>15000</option>".
+        "<option value='15000'>16000</option>".
+        "<option value='15000'>17000</option>".
+        "<option value='15000'>18000</option>".
+        "<option value='15000'>19000</option>".
+        "<option value='15000'>20000</option>".
+        "<option value='15000'>21000</option>".
+        "<option value='15000'>22000</option>".
+        "<option value='15000'>23000</option>".
+        "<option value='15000'>24000</option>".
+        "<option value='15000'>25000</option>".
+        "<option value='15000'>26000</option>".
+        "<option value='15000'>27000</option>".
+        "<option value='15000'>28000</option>".
+        "<option value='15000'>29000</option>".
+        "<option value='15000'>30000</option>".
         "</select>".
       "</div>".
     "</div>".
@@ -971,51 +1001,56 @@ function calculadora_funcion($atts) {
     //</div>
 
     $salida.="<div class='col-6'>".
+
+    
+
     "<div class='col-12'>".
     "<div class='caja  caja-interior'>".
-    "<div class='caja-header'>".
-    "<h2>INTERIOR</h2>".
+      "<div class='caja-header'>".
+        "<h2>INTERIOR</h2>".
+      "</div>".
+      "<div class='caja-contenido'>".
+        "<div class='caja-mas-contenido'>".
+          "<div>".
+            "<label>GRAMAJE".
+        	    "<div class='tooltip' id='tooltip-gramaje-interior' style='display: none'>".
+                "<i class='fa fa-exclamation-circle'></i> <span class='tooltiptext'>El gramaje interior y exterior no pueden ser iguales y mayores que 170 en pedidos online. Llámanos ahora para hacer el pedido</span>".
+              "</div>".
+      	    "</label>".
+            "<div class='custom-select'>".
+              "<select name='gramaje_interior'>".
+                "<option value='0'>Elige</option>".
+                "<option value='90'>90</option>".
+                "<option value='100'>100</option>".
+                "<option value='115'>115</option>".
+                "<option value='125'>125</option>".
+                "<option value='135'>135</option>".
+                "<option value='150'>150</option>".
+                "<option value='170'>170</option>".
+                "<option value='200'>200</option>".
+                "<option value='250'>250</option>".
+                "<option value='300'>300</option>".
+                "<option value='350'>350</option>".
+              "</select>".
+            "</div>".
+          "</div>".
+          "<div>".
+            "<label>PAPEL</label>".
+              "<div class='custom-select custom-radio'>".
+                "<div class='toggle'>".
+                  "<input type='radio' name='papel_interior' value='M' id='papel_interior_mate' />".
+                  "<label for='papel_interior_mate'>Mate</label>".
+
+                  "<input type='radio' name='papel_interior' value='B' id='papel_interior_brillo' />".
+                  "<label for='papel_interior_brillo'>Brillo</label>".
+                "</div>".
+              "</div>".
+            "</div>".
+          "</div>".
+        "</div>".
+      "</div>".
     "</div>".
-    "<div class='caja-contenido'>".
-    "<div class='caja-mas-contenido'>".
-    "<div>".
-    "<label>GRAMAJE".
-	"<div class='tooltip' id='tooltip-gramaje-interior' style='display: none'>".
-    "<i class='fa fa-exclamation-circle'></i> <span class='tooltiptext'>El gramaje interior y exterior no pueden ser iguales y mayores que 170 en pedidos online. Llámanos ahora para hacer el pedido</span>".
-    "</div>".
-	"</label>".
-    "<div class='custom-select'>".
-    "<select name='gramaje_interior'>".
-    "<option value='0'>Elige</option>".
-    "<option value='90'>90</option>".
-    "<option value='100'>100</option>".
-    "<option value='115'>115</option>".
-    "<option value='125'>125</option>".
-    "<option value='135'>135</option>".
-    "<option value='150'>150</option>".
-    "<option value='170'>170</option>".
-    "<option value='200'>200</option>".
-    "<option value='250'>250</option>".
-    "<option value='300'>300</option>".
-    "<option value='350'>350</option>".
-    "</select>".
-    "</div>".
-    "</div>".
-    "<div>".
-    "<label>PAPEL</label>".
-    "<div class='custom-select custom-radio'>".
-    "<div class='toggle'>".
-    "<input type='radio' name='papel_interior' value='M' id='papel_interior_mate' />".
-    "<label for='papel_interior_mate'>Mate</label>".
-    "<input type='radio' name='papel_interior' value='B' id='papel_interior_brillo' />".
-    "<label for='papel_interior_brillo'>Brillo</label>".
-    "</div>".
-    "</div>".
-    "</div>".
-    "</div>".
-    "</div>".
-    "</div>".
-    "</div>".
+
     "<div class='col-12'>".
     "<div class='caja caja-cubierta'>".
     "<div class='caja-header'>".
@@ -2233,7 +2268,7 @@ function funcion_pedidos(){
                 <li><strong>Email:</strong> <?= $result->f_email; ?></li>
                 <li><strong>CP:</strong> <?= $result->f_cp; ?></li>
                 <li><strong>Provincia:</strong> <?= $result->f_provincia; ?></li>
-				<li><strong>Localidad:</strong> <?= $result->f_localidad; ?></li>
+				        <li><strong>Localidad:</strong> <?= $result->f_localidad; ?></li>
                 <li><strong>Teléfono:</strong> <?= $result->f_telefono; ?></li>
             </ul>
 
@@ -2412,7 +2447,7 @@ function funcion_insercion_pedido(){
     $f_email = $_POST['f_email'];
     $f_cp = $_POST['f_cp'];
     $f_provincia = $_POST['f_provincia'];
-	$f_localidad = $_POST['f_localidad'];
+	  $f_localidad = $_POST['f_localidad'];
     $f_telefono = $_POST['f_telefono'];
     $datos_mismos = $_POST['f_mismos_facturacion'];
 
@@ -2424,7 +2459,7 @@ function funcion_insercion_pedido(){
     $e_email = $_POST['e_email'];
     $e_cp = $_POST['e_cp'];
     $e_provincia = $_POST['e_provincia'];
-	$e_localidad= $_POST['e_localidad'];
+	  $e_localidad= $_POST['e_localidad'];
     $e_telefono = $_POST['e_telefono'];
 
     //venta
@@ -2437,12 +2472,18 @@ function funcion_insercion_pedido(){
 
     $em_formato; //formato papel
 
-    if($formato == "a3"){
+    if($formato == "a4"){
+        $em_formato = "A4";
+    }else if($formato == "a5"){
         $em_formato = "A5";
-    }else if($formato == "17"){
+    }else if($formato == "a6"){
+        $em_formato = "A6";
+    }else if($formato == "1724"){
         $em_formato = "17x24";
-    }else if($formato == "a4"){
-        $em_formato = "a4";
+    }else if($formato == "2020"){
+        $em_formato = "20x20";
+    }else if($formato == "2121"){
+        $em_formato = "21x21";
     }
 
     $em_papel_interior;
